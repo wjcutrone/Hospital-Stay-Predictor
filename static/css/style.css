@@ -1,0 +1,68 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    background: rgba(0,0,0,0.3) url("../images/hospital.jpg");
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+}
+
+body h3 {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    -webkit-text-stroke: 3px black;
+    padding-top: 1em;
+}
+
+.navbar-custom {
+    background-color: rgb(252, 184, 125);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+            color: white;
+            font-family: 'Lato', sans-serif;
+            -webkit-text-stroke: 0.8px black;
+            font-size: 2.5em;
+        }
+
+.navbar a {
+    float: left;
+    color: white;
+    width: 25%;
+    text-align: center;
+    transition: .3s ease-in-out;
+    margin-right: 0em;
+}
+
+.navbar a:hover {
+    background-color: rgb(221, 139, 72);
+  }
+
+#main-navbar {
+    padding-top: 0em;
+    padding-bottom: 0em;
+}
+
+.btn {
+    border-radius: 12px;
+    background-color:rgb(252, 184, 125) !important;
+    border: white !important;
+    -webkit-text-stroke: 0.7px black;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px !important;
+}
+
+.btn:hover {
+    background-color: rgb(221, 139, 72) !important;
+}
+
+.button {
+    text-align: center;
+    padding-top: 5em;
+}
