@@ -22,7 +22,10 @@ app = Flask(__name__)
 # engine = create_engine(f"postgresql://hospital-stay-postgresdb.czsgahc5qz1z.us-east-2.rds.amazonaws.com")
 # conn = engine.connect()
 
-
+# the model needs to be loaded and possibly the prepossesser or scaler
+# model = load_model(modelpath and saved-model-name)
+# model = joblib.load(saved-model-name.pkl')
+# sc = load(modelpath and saved-scaler-name)
 
 # Create a test route and function that returns a string
 @app.route("/test", methods=['GET'])
@@ -35,9 +38,9 @@ def test():
 def home():
     return render_template("index.html")
 
-# Create a route to get the user input and send it to the model
-@app.route("/send", methods=['GET','POST'])
-def send();
+# Create a route to get the user inputs and send them to the model
+@app.route("/predict", methods=['GET','POST'])
+def predict();
     if request.method == 'POST':
         hospcode = request.form["Hospital_code"]
         hosptype = request.form["Hospital_type_code"]
@@ -54,6 +57,7 @@ def send();
         visitors = request.form["Visitors with Patient"]
         age = request.form["Age"]
         deposit = request.form["Admission_Deposit"]
+
 
 
 
