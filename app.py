@@ -3,11 +3,13 @@ import sqlalchemy
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, inspect
 from flask import Flask, jsonify, render_template, request, g, redirect
+from tensorflow.keras.models import load_model
 import pandas as pd
 import psycopg2
 import sqlite3
+import os
+# from model_files.ml_model import model_name
 # sklearn libraries need to be imported
-
 
 
 #########################################
@@ -58,12 +60,14 @@ def predict();
         age = request.form["Age"]
         deposit = request.form["Admission_Deposit"]
 
+    row_df = pd.DataFrame([pd.Series([hospcode, hosptype, hospcity, hospregion, extrarooms, dept, ward, wardcode, bedgrade, patientcity, admtype, severity, visitors, age, deposit])])
+    row_df = pd.DataFrame(std.transform(row_df))
 
+    prediction = model.predict(row_df)
+    #prediction = model.predict_proba(row_df)
+    output=(prediction)
 
-
-
-
-
+    # 
 
 
 
