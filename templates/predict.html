@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-custom" id="main-navbar">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">About</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="predict.html">Predict</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Insight</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>             
+          </nav>
+          <div class="bg">
+            <div class="container">
+                <div class="row">
+                    <div class="transbox" style="margin-top: 5px">
+                        <form>
+                                <div>
+                                    <label for="hospcode">Hospital Code:</label>
+                                    <select id="hospcode" name="hospcode">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                        <option value="32">32</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="hosptype">Hospital Type Code:</label>
+                                    <select id="hosptype" name="hosptype">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                        <option value="f">f</option>
+                                        <option value="g">g</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="citycode">City Code:</label>
+                                    <select id="citycode" name="citycode">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="13">13</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="regcode">Region Code:</label>
+                                    <select id="regcode" name="regcode">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="x">X</option>
+                                        <option value="y">Y</option>
+                                        <option value="z">Z</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="extrarooms">Extra Rooms Available:</label>
+                                    <select id="extrarooms" name="extrarooms">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="13">14</option>
+                                        <option value="13">15</option>
+                                        <option value="13">16</option>
+                                        <option value="13">17</option>
+                                        <option value="21">18</option>
+                                        <option value="21">19</option>
+                                        <option value="21">20</option>
+                                        <option value="21">21</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="dept">Department:</label>
+                                    <select id="dept" name="dept">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="anesthesia">Anesthesia</option>
+                                        <option value="gynecology">Gynecology</option>
+                                        <option value="radiotherapy">Radiotherapy</option>
+                                        <option value="surgery">Surgery</option>
+                                        <option value="tb & chest disease">TB & Chest Disease</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="wardtype">Ward Type:</label>
+                                    <select id="wardtype" name="wardtype">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="p">P</option>
+                                        <option value="q">Q</option>
+                                        <option value="r">R</option>
+                                        <option value="s">S</option>
+                                        <option value="t">T</option>
+                                        <option value="u">U</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="wardfac">Ward Facility Code:</label>
+                                    <select id="wardfac" name="wardfac">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="a">A</option>
+                                        <option value="b">B</option>
+                                        <option value="c">C</option>
+                                        <option value="d">D</option>
+                                        <option value="e">E</option>
+                                        <option value="f">F</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="bedgrade">Bed Grade:</label>
+                                    <select id="bedgrade" name="bedgrade">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="patientcode">Patient City Code:</label>
+                                    <select id="patientcode" name="patientcode">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                        <option value="32">32</option>
+                                        <option value="33">33</option>
+                                        <option value="34">34</option>
+                                        <option value="35">35</option>
+                                        <option value="36">36</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="admissiontype">Type of Admission:</label>
+                                    <select id="admissiontype" name="admissiontype">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="emergency">Emergency</option>
+                                        <option value="trauma">Trauma</option>
+                                        <option value="urgent">Urgent</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="severity">Severity of Illness:</label>
+                                    <select id="severity" name="severity">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="extreme">Extreme</option>
+                                        <option value="moderate">Moderate</option>
+                                        <option value="minor">Minor</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="visitors">Visitors with Patient:</label>
+                                    <input type="text" id="visitors" name="visitors">
+                                </div>
+                                <div>
+                                    <label for="age">Age:</label>
+                                    <select id="age" name="age">
+                                        <option selected disabled hidden style='display: none' value=''></option>
+                                        <option value="0-10">0-10</option>
+                                        <option value="11-20">11-20</option>
+                                        <option value="21-30">21-30</option>
+                                        <option value="31-40">31-40</option>
+                                        <option value="41-50">41-50</option>
+                                        <option value="51-60">51-60</option>
+                                        <option value="61-70">61-70</option>
+                                        <option value="71-80">71-80</option>
+                                        <option value="81-90">81-90</option>
+                                        <option value="91-100">91-100</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="admissiondep">Admission Deposit:</label>
+                                    <input type="text" id="admissiondep" name="admissiondep">
+                                </div>
+                        </form>
+                    
+                        <div class="buttonp">
+                            <p><a class="btn btn-primary btn-lg" href="predict.html" role="button">Predict</a></p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+    </body>
+</html>

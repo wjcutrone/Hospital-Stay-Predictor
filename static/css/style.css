@@ -9,10 +9,11 @@ body, html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     background-blend-mode: darken;
 }
 
-body h3 {
+h3 {
     color: white;
     font-family: 'Lato', sans-serif;
     -webkit-text-stroke: 3px black;
@@ -33,15 +34,14 @@ body h3 {
 
 .navbar a {
     float: left;
-    color: white;
     width: 25%;
     text-align: center;
-    transition: .3s ease-in-out;
     margin-right: 0em;
 }
 
 .navbar a:hover {
     background-color: rgb(221, 139, 72);
+    transition: .3s ease-in-out;
   }
 
 #main-navbar {
@@ -52,7 +52,7 @@ body h3 {
 .btn {
     border-radius: 12px;
     background-color:rgb(252, 184, 125) !important;
-    border: white !important;
+    border: 2px solid rgb(221, 139, 72) !important;
     -webkit-text-stroke: 0.7px black;
     font-family: 'Lato', sans-serif;
     font-size: 30px !important;
@@ -66,3 +66,34 @@ body h3 {
     text-align: center;
     padding-top: 5em;
 }
+
+.buttonp {
+    text-align: center;
+
+}
+
+label {
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+    font-size: 20px;
+}
+
+select {
+    display: inline-block;
+    width: 50px;
+}
+
+input {
+    width: 50px;
+}
+
+.transbox {
+    background-color: rgba(215, 226, 228, 0.7);
+    border: 1px solid black;
+}
+
+form {
+    text-align: center;
+}
+
