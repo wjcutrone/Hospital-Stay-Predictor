@@ -81,11 +81,17 @@ label {
 
 select {
     display: inline-block;
-    width: 50px;
+    width: 200px;
 }
 
-input {
-    width: 50px;
+input[type=text] {
+    width: 200px;
+}
+
+input[type=submit] {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .transbox {
