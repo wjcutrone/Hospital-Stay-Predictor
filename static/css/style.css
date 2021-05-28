@@ -17,7 +17,7 @@ h3 {
     color: white;
     font-family: 'Lato', sans-serif;
     -webkit-text-stroke: 3px black;
-    padding-top: 1em;
+    /* padding-top: 1em; */
 }
 
 .navbar-custom {
@@ -34,7 +34,7 @@ h3 {
 
 .navbar a {
     float: left;
-    width: 25%;
+    width: 33.3%;
     text-align: center;
     margin-right: 0em;
 }

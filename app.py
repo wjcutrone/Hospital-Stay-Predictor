@@ -7,6 +7,7 @@ from tensorflow.keras.models import load_model
 import pandas as pd
 import psycopg2
 import os
+import json
 # sklearn libraries need to be imported
 # from sklearn.preprocessing import StandardScaler
 
@@ -22,8 +23,8 @@ def home():
     return render_template("index.html")
 
 # Create a route to get the user inputs and send them to the model
-@app.route("/predict", methods=['GET', 'POST'])
-def predict(input):
+@app.route("/", methods=['GET', 'POST'])
+def predict():
     if request.method == 'POST':
         Admission_Deposit = request.form["Admission_Deposit"]
         Age = request.form["Age"]
@@ -38,7 +39,7 @@ def predict(input):
         Severity_of_Illness = request.form["Severity of Illness"]
         Type_of_Admission = request.form["Type of Admission"]
         Visitors_with_Patient = request.form["Visitors with Patient"]
-        Ward_Facility_Code = request.form["Ward_Facilty_Code"]
+        Ward_Facility_Code = request.form["Ward_Facility_Code"]
         Ward_Type = request.form["Ward_Type"]
 
         input = {"Admission_Deposit": Admission_Deposit,
@@ -54,7 +55,7 @@ def predict(input):
                  "Severity of Illness": Severity_of_Illness,
                  "Type of Admission": Type_of_Admission,
                  "Visitors with Patient": Visitors_with_Patient,
-                 "Ward_Facility_Code": Ward_Facilty_Code,
+                 "Ward_Facility_Code": Ward_Facility_Code,
                  "Ward_Type": Ward_Type}
         
 
@@ -83,9 +84,7 @@ def predict(input):
     model_1.load_weights('training_1/cp-0047.ckpt')
     prediction = model_1.predict(input_t).argmax()
     prediction = y_translator[str(prediction)]
-    return render_template("predict.html", prediction=prediction)
-
-predict(input)
+    return render_template("index.html", prediction=prediction)
 
 
 if __name__ == "__main__":
