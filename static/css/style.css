@@ -86,6 +86,7 @@ select {
 
 input[type=text] {
     width: 200px;
+    height: 25px;
 }
 
 input[type=submit] {

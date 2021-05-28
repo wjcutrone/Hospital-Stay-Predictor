@@ -31,10 +31,10 @@
             <div class="container">
                 <div class="row">
                     <div class="transbox" style="margin-top: 5px">
-                        <form method="POST">
+                        <form action="/predict" method="POST">
                                 <div>
                                     <label for="hospcode">Hospital Code:</label>
-                                    <select id="hospcode" name="hospcode">
+                                    <select id="hospcode" name="Hospital_code">
                                         <option selected disabled hidden style='display: none' value=''></option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -72,7 +72,7 @@
                                 </div>
                                 <div>
                                     <label for="hosptype">Hospital Type Code:</label>
-                                    <select id="hosptype" name="hosptype">
+                                    <select id="hosptype" name="Hospital_type_code">
                                         <option selected disabled hidden style='display: none' value=''></option>
                                         <option value="a">a</option>
                                         <option value="b">b</option>
@@ -84,8 +84,8 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="citycode">City Code:</label>
-                                    <select id="citycode" name="citycode">
+                                    <label for="citycode">Hospital City Code:</label>
+                                    <select id="citycode" name="City_Code_Hospital">
                                         <option selected disabled hidden style='display: none' value=''></option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -102,7 +102,7 @@
                                 </div>
                                 <div>
                                     <label for="regcode">Region Code:</label>
-                                    <select id="regcode" name="regcode">
+                                    <select id="regcode" name="Hospital_region_code">
                                         <option selected disabled hidden style='display: none' value=''></option>
                                         <option value="x">X</option>
                                         <option value="y">Y</option>
@@ -111,35 +111,11 @@
                                 </div>
                                 <div>
                                     <label for="extrarooms">Extra Rooms Available:</label>
-                                    <select id="extrarooms" name="extrarooms">
-                                        <option selected disabled hidden style='display: none' value=''></option>
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="13">14</option>
-                                        <option value="13">15</option>
-                                        <option value="13">16</option>
-                                        <option value="13">17</option>
-                                        <option value="21">18</option>
-                                        <option value="21">19</option>
-                                        <option value="21">20</option>
-                                        <option value="21">21</option>
-                                    </select>
+                                    <input type="text" id="visitors" name="Available Extra Rooms in Hospital">
                                 </div>
                                 <div>
                                     <label for="dept">Department:</label>
-                                    <select id="dept" name="dept">
+                                    <select id="dept" name="Department">
                                         <option selected disabled hidden style='display: none' value=''></option>
                                         <option value="anesthesia">Anesthesia</option>
                                         <option value="gynecology">Gynecology</option>
@@ -150,7 +126,7 @@
                                 </div>
                                 <div>
                                     <label for="wardtype">Ward Type:</label>
-                                    <select id="wardtype" name="wardtype">
+                                    <select id="wardtype" name="Ward_Type">
                                         <option selected disabled hidden style='display: none' value=''></option>
                                         <option value="p">P</option>
                                         <option value="q">Q</option>
@@ -162,7 +138,7 @@
                                 </div>
                                 <div>
                                     <label for="wardfac">Ward Facility Code:</label>
-                                    <select id="wardfac" name="wardfac">
+                                    <select id="wardfac" name="Ward_Facilty_Code">
                                         <option selected disabled hidden style='display: none' value=''></option>
                                         <option value="a">A</option>
                                         <option value="b">B</option>
@@ -174,7 +150,7 @@
                                 </div>
                                 <div>
                                     <label for="bedgrade">Bed Grade:</label>
-                                    <select id="bedgrade" name="bedgrade">
+                                    <select id="bedgrade" name="Bed Grade">
                                         <option selected disabled hidden style='display: none' value=''></option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -184,7 +160,7 @@
                                 </div>
                                 <div>
                                     <label for="patientcode">Patient City Code:</label>
-                                    <select id="patientcode" name="patientcode">
+                                    <select id="patientcode" name="City_Code_Patient">
                                         <option selected disabled hidden style='display: none' value=''></option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -228,7 +204,7 @@
                                 </div>
                                 <div>
                                     <label for="admissiontype">Type of Admission:</label>
-                                    <select id="admissiontype" name="admissiontype">
+                                    <select id="admissiontype" name="Type of Admission">
                                         <option selected disabled hidden style='display: none' value=''></option>
                                         <option value="emergency">Emergency</option>
                                         <option value="trauma">Trauma</option>
@@ -237,7 +213,7 @@
                                 </div>
                                 <div>
                                     <label for="severity">Severity of Illness:</label>
-                                    <select id="severity" name="severity">
+                                    <select id="severity" name="Severity of Illness">
                                         <option selected disabled hidden style='display: none' value=''></option>
                                         <option value="extreme">Extreme</option>
                                         <option value="moderate">Moderate</option>
@@ -246,11 +222,11 @@
                                 </div>
                                 <div>
                                     <label for="visitors">Visitors with Patient:</label>
-                                    <input type="text" id="visitors" name="visitors">
+                                    <input type="text" id="visitors" name="Visitors with Patient">
                                 </div>
                                 <div>
                                     <label for="age">Age:</label>
-                                    <select id="age" name="age">
+                                    <select id="age" name="Age">
                                         <option selected disabled hidden style='display: none' value=''></option>
                                         <option value="0-10">0-10</option>
                                         <option value="11-20">11-20</option>
@@ -265,13 +241,16 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="admissiondep">Admission Deposit:</label>
-                                    <input type="text" id="admissiondep" name="admissiondep">
+                                    <label for="deposit">Admission Deposit:</label>
+                                    <input type="text" id="deposit" name="Admission_Deposit">
                                 </div>
                                 <div>
                                     <input type="submit" value="Submit">
                                 </div>
                         </form>
+                        <h5>
+                            Your predicted hospital stay is {{ prediction }} days.
+                        </h5>
                         </div>
                     </div>
                 </div>
