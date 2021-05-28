@@ -8,8 +8,9 @@ import pandas as pd
 import psycopg2
 import sqlite3
 import os
-# from model_files.ml_model import model_name
+# from model_files.ml_model import the-name-of-the-model
 # sklearn libraries need to be imported
+# from sklearn.preprocessing import StandardScaler
 
 
 #########################################
@@ -25,7 +26,7 @@ app = Flask(__name__)
 # conn = engine.connect()
 
 # the model needs to be loaded and possibly the prepossesser or scaler
-# model = load_model(modelpath and saved-model-name)
+model = load_model(modelpath and saved-model-name)
 # model = joblib.load(saved-model-name.pkl')
 # sc = load(modelpath and saved-scaler-name)
 
@@ -46,28 +47,29 @@ def predict();
     if request.method == 'POST':
         hospcode = request.form["Hospital_code"]
         hosptype = request.form["Hospital_type_code"]
-        hospcity = request.form["City_Code_Hospital"]
+        #hospcity = request.form["City_Code_Hospital"]
         hospregion = request.form["Hospital_region_code"]
         extrarooms= request.form["Available Extra Rooms in Hospital"]
         dept = request.form["Department"]
         ward = request.form["Ward_Type"]
         wardcode = request.form["Ward_Facilty_Code"]
         bedgrade = request.form["Bed Grade"]
-        patientcity = request.form["City_Code_Patient"]
+        #patientcity = request.form["City_Code_Patient"]
         admtype = request.form["Type of Admission"]
         severity = request.form["Severity of Illness"]
         visitors = request.form["Visitors with Patient"]
         age = request.form["Age"]
         deposit = request.form["Admission_Deposit"]
 
-    row_df = pd.DataFrame([pd.Series([hospcode, hosptype, hospcity, hospregion, extrarooms, dept, ward, wardcode, bedgrade, patientcity, admtype, severity, visitors, age, deposit])])
+# Create a dataframe that holds the user inputs and if needed run the preprocessor
+    row_df = pd.DataFrame([pd.Series([hospcode, hosptype, hospregion, extrarooms, dept, ward, wardcode, bedgrade, admtype, severity, visitors, age, deposit])])
     row_df = pd.DataFrame(std.transform(row_df))
 
+# Predict the probability and return the result
     prediction = model.predict(row_df)
-    #prediction = model.predict_proba(row_df)
     output=(prediction)
 
-    # 
+    return (result)
 
 
 
