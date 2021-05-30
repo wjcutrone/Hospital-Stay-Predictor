@@ -7,7 +7,6 @@ import json
 import numpy as np
 import h5py
 
-
 x_categorical_columns = ['Hospital_type_code',
                             'Hospital_region_code',
                             'Department',
