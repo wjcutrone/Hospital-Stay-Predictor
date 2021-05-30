@@ -74,7 +74,7 @@ def predict():
     with open('translators.json', 'r') as f:
         translators=json.load(f)
 
-    translators = None
+  
     X_translator = translators['X_translator']
     scale_translator = translators['scale_translator']
     order = translators['data_order']
