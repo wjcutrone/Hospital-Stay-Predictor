@@ -1,12 +1,11 @@
-# Import necessary libraries
 from flask import Flask, jsonify, render_template, request, g, redirect
 from tensorflow.keras.models import load_model
 import pandas as pd
 import psycopg2
 import os
 import json
-# sklearn libraries need to be imported
-# from sklearn.preprocessing import StandardScaler
+
+
 x_categorical_columns = ['Hospital_type_code',
                             'Hospital_region_code',
                             'Department',
@@ -22,7 +21,7 @@ x_categorical_columns = ['Hospital_type_code',
 x_numerical_columns = ['Available Extra Rooms in Hospital',
                             'Visitors with Patient',
                             'Admission_Deposit']
-translators = None
+
 
 #########################################
 # Flask Setup
@@ -74,6 +73,7 @@ def predict():
     with open('translators.json', 'r') as f:
         translators=json.load(f)
 
+    translators = None
     X_translator = translators['X_translator']
     scale_translator = translators['scale_translator']
     order = translators['data_order']
@@ -82,11 +82,7 @@ def predict():
     for (category, value) in input.items():
         print(category, value)
         if category in x_categorical_columns:
-            try:
-               input_t[category] = X_translator[category][str(value)]
-            except:
-                pass
-            try:
+            input_t[category] = X_translator[category][str(value)]
         elif category in x_numerical_columns:
             mean = scale_translator[category]['mean']
             std = scale_translator[category]['standard_deviation']
