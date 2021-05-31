@@ -10,5 +10,5 @@ This prediction model was made using a dataset found on kaggle.com, originally f
 
 #### <heroku link>
   
-#### Made by Will Cutrone, Stephen Domke, Mona Peteet and Tom Babjack   
-#### May 2021
+##### Made by Will Cutrone, Stephen Domke, Mona Peteet and Tom Babjack   
+##### May 2021
