@@ -2,7 +2,6 @@ Flask>=1.1.1
 Jinja2>=2.10.3
 gunicorn>=20.0.0
 psycopg2>=2.8.6
-scikit-learn>=0.23.0
 tensorflow>=2.3.1
 
 
