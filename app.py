@@ -4,12 +4,8 @@ import pandas as pd
 import psycopg2
 import os
 import json
-<<<<<<< HEAD
 import numpy as np
 import h5py
-=======
-
->>>>>>> 5aa5c182de7989011a804672962bcc32931d4ea8
 
 x_categorical_columns = ['Hospital_type_code',
                             'Hospital_region_code',
@@ -78,7 +74,7 @@ def predict():
     with open('translators.json', 'r') as f:
         translators=json.load(f)
 
-    translators = None
+  
     X_translator = translators['X_translator']
     scale_translator = translators['scale_translator']
     order = translators['data_order']
@@ -87,14 +83,10 @@ def predict():
     for (category, value) in input.items():
         print(category, value)
         if category in x_categorical_columns:
-<<<<<<< HEAD
             try:
                input_t[category] = X_translator[category][str(value)]
             except:
                 pass
-=======
-            input_t[category] = X_translator[category][str(value)]
->>>>>>> 5aa5c182de7989011a804672962bcc32931d4ea8
         elif category in x_numerical_columns:
             mean = scale_translator[category]['mean']
             std = scale_translator[category]['standard_deviation']
