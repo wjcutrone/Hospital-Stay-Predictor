@@ -8,7 +8,9 @@ This prediction model was made using a dataset found on kaggle.com, originally f
 #### - Web framework/workflow engine: Flask
 #### - Frontend development: HTML/CSS, Tableau
 
-#### <heroku link>
+#### - Link to Site: https://hospital-stay-predictor.herokuapp.com/
+
+![HomePage.png](images/HomePage.png)
   
 ##### Made by Will Cutrone, Stephen Domke, Mona Peteet and Tom Babjack   
 ##### May 2021
